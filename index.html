@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>A Star Pathfinding Demo</title>
+		<style>
+		#instructionText
+		{
+			position:absolute;
+			left:22px;
+			top:550px;
+		}
+		
+		#stateButton
+		{
+			position:absolute;
+			left:18px;
+			top:585px;
+		}
+		</style>
+    </head>
+    <body>
+		<canvas id="gameCanvas" width="640" height="649"></canvas>
+		<pre id="instructionText">Click me</pre>
+		<button id="stateButton" onclick="onButtonClick()">Please Click me</button>
+        <script src="pathfinding.js"></script>
+		<script src="demo.js"></script>
+	</body>
+</html>
