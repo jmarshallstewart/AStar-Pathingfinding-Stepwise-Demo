@@ -103,8 +103,8 @@ function isInList(row, col, list) {
 }
 
 function getEuclideanDistance(startRow, startCol, endRow, endCol) {
-    var x = Math.abs(startRow - endRow);
-    var y = Math.abs(startCol - endCol);
+    var x = startRow - endRow;
+    var y = startCol - endCol;
     return Math.sqrt(x * x + y * y);
 }
 
