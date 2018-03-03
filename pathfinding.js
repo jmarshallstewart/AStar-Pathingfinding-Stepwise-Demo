@@ -103,7 +103,9 @@ function isInList(row, col, list) {
 }
 
 function getEuclideanDistance(startRow, startCol, endRow, endCol) {
-    return Math.min(Math.abs(startRow - endRow), Math.abs(startCol - endCol));
+    var x = Math.abs(startRow - endRow);
+    var y = Math.abs(startCol - endCol);
+    return Math.sqrt(x * x + y * y);
 }
 
 //function getManhattanDistance(startRow, startCol, endRow, endCol) {

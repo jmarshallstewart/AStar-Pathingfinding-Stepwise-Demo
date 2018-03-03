@@ -1,7 +1,7 @@
 var canvas = document.getElementById("gameCanvas");
 var context = canvas.getContext("2d");
 
-context.font = "14pt Courier";
+context.font = "12pt Courier";
 
 canvas.addEventListener('mouseout', function() { isPainting = false; }, false);
 canvas.addEventListener('mousemove', onMouseMove, false);
@@ -347,7 +347,7 @@ function drawNodeText(node) {
 	}
 	
     context.fillStyle = "rgba(0, 0, 0, 1)";
-    context.fillText("F: " + node.f, left, yOffset + top);
-    context.fillText("G: " + node.g, left, yOffset * 2 + top);
-    context.fillText("H: " + node.h, left, yOffset * 3 + top);
+    context.fillText("F:" + node.f.toFixed(1), left, yOffset + top);
+    context.fillText("G:" + node.g.toFixed(1), left, yOffset * 2 + top);
+    context.fillText("H:" + node.h.toFixed(1), left, yOffset * 3 + top);
 }
