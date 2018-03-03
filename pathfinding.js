@@ -65,7 +65,7 @@ function stepPath(startRow, startCol, endRow, endCol, numRows, numCols, grid) {
 							var nextNode = new PathfindingNode(nextRow, nextCol);
 							nextNode.parent = currentNode;
 							nextNode.g = gCost;
-							nextNode.h = getManhattanDistance(nextNode.row, nextNode.col, endRow, endCol);
+							nextNode.h = getEuclideanDistance(nextNode.row, nextNode.col, endRow, endCol);
 							nextNode.f = nextNode.g + nextNode.h;
 							openList.push(nextNode);
 						// otherwise, check to see if currentNode offers a shorter path to the node that
@@ -102,7 +102,10 @@ function isInList(row, col, list) {
 	return getFromList(row, col, list) != null;
 }
 
-function getManhattanDistance(startRow, startCol, endRow, endCol) {
-    //return 0;
-	return Math.abs(startRow - endRow) + Math.abs(startCol - endCol);
+function getEuclideanDistance(startRow, startCol, endRow, endCol) {
+    return Math.min(Math.abs(startRow - endRow), Math.abs(startCol - endCol));
 }
+
+//function getManhattanDistance(startRow, startCol, endRow, endCol) {
+//    return Math.abs(startRow - endRow) + Math.abs(startCol - endCol);
+//}
