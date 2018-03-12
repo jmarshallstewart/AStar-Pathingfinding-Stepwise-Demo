@@ -1,5 +1,5 @@
-var openList = [];
-var closedList = [];
+var openList = null;
+var closedList = null;
 var numNodesSearched = 0;
 var path = null;
 
