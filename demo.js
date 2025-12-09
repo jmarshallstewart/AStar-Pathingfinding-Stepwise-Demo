@@ -133,9 +133,9 @@ function enterState(nextState) {
     stateButtonElement.innerHTML = nextState.buttonText;
     
     if(nextState.hideButton) {
-        document.getElementById("stateButton").style.visibility = "hidden";
+        stateButtonElement.style.visibility = "hidden";
     } else {
-        document.getElementById("stateButton").style.visibility = "visible";
+        stateButtonElement.style.visibility = "visible";
     }
     
     draw();
