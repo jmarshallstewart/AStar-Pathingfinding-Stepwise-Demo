@@ -2,7 +2,6 @@
 
 let openList = null;
 let closedList = null;
-let numNodesSearched = 0;
 let path = null;
 
 const statusSearching = 0;
@@ -14,7 +13,6 @@ function pathfindingInit() {
     // instead for larger grids or production use.
     openList = []; 
     closedList = [];
-    numNodesSearched = 0;
     
     path = null;
 }
